@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -78,13 +78,18 @@
     <Compile Include="AboutReportSync.Designer.cs">
       <DependentUpon>AboutReportSync.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConvertTo2012.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConvertTo2012.Designer.cs">
+      <DependentUpon>ConvertTo2012.cs</DependentUpon>
+    </Compile>
     <Compile Include="MapDatasources.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MapDatasources.designer.cs">
       <DependentUpon>MapDatasources.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportItem.cs" />
     <Compile Include="ReportSync.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +101,9 @@
     <EmbeddedResource Include="AboutReportSync.resx">
       <DependentUpon>AboutReportSync.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConvertTo2012.resx">
+      <DependentUpon>ConvertTo2012.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MapDatasources.resx">
       <DependentUpon>MapDatasources.cs</DependentUpon>
@@ -220,8 +228,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ServiceWrapper.cs" />
-    <Compile Include="SubscriptionItem.cs" />
     <Compile Include="Web References\ReportService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -232,10 +238,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://neo026:8080/Reportserver/ReportService2005.asmx">
+    <WebReferenceUrl Include="http://192.168.0.20:80/Reportserver_AMSREPORTS/ReportService2005.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\ReportService\</RelPath>
-      <UpdateFromURL>http://neo026:8080/Reportserver/ReportService2005.asmx</UpdateFromURL>
+      <UpdateFromURL>http://192.168.0.20:80/Reportserver_AMSREPORTS/ReportService2005.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -245,14 +251,13 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
+    <None Include="rightarrow.png" />
     <Content Include="sync.ico" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
