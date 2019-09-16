@@ -8,7 +8,9 @@ Things added in this branch:
 
 # Source Report Server URL 
 
-This is saved to a settings file which is read and populated into the textbox upon the application starting up
+This is saved to a settings file which is read and populated into the textbox upon the application starting up.
+
+By pressing the right arrow button, the credential will be copied over to the left to Destination web service fields.
 
 # Updating Connection credentials
 
