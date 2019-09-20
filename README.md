@@ -10,7 +10,7 @@ Things added in this branch:
 
 This is saved to a settings file which is read and populated into the textbox upon the application starting up.
 
-By pressing the right arrow button, the credential will be copied over to the left to Destination web service fields.
+By pressing the right arrow button, the credential will be copied over to the right to Destination web service fields.
 
 # Updating Connection credentials
 
@@ -34,7 +34,7 @@ Press Update Connections at the bottom.
 
 You will need a physical .rdl file for this - download using this application, or another method.
 
-Select the *Tools -> Convert rdl to 2012* menu option
+Select the *Tools -> Convert 2016 rdl to 2012* menu option
 
 On the dialog window, click on the [...] button to browse to an rdl file that needs to be converted.
 
